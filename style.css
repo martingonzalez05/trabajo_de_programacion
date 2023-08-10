@@ -1,0 +1,358 @@
+
+body, html {
+    background: linear-gradient(to bottom, #232323, #111111);
+    color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0 0 0 0px;
+    
+}
+
+
+.head {
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.logo {
+   
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    height: 2.3rem;
+    display: inline-block;
+    border: 2px solid white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 0 10px; 
+    cursor: pointer;
+    vertical-align: middle; 
+}
+.header{
+display: flex;}
+
+
+/* Estilos para los enlaces */
+.parts ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+     
+}
+
+.frags {
+    margin: 0 px;
+    font-size: 1.2rem;
+}
+
+.frags a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+    border-bottom: 2px solid transparent;
+}
+
+.frags a:hover {
+    color: #FF5733;
+    border-bottom: 2px solid #FF5733;
+}
+.frags:last-child a {
+    border-bottom: none;
+}
+
+/* Añadidos estilos para la sección 'What is the page' */
+.what-is-the-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.imga {
+    /* Tus estilos existentes */
+    /* ... */
+    margin: 20px auto;
+}
+
+/* Añadidos estilos para la sección 'Who are us' */
+.who-are-us {
+    /* Tus estilos existentes */
+    /* ... */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list {
+    /* Tus estilos existentes */
+    /* ... */
+    display: flex;
+    align-items: center;
+    color:white;
+}
+
+.navbar {
+    background-color: #2c2150;
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+p{
+    color: white;
+}
+.icons{
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
+}  
+.container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}  
+label {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 16px;
+} 
+header{
+    text-align: center;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 20px 0;
+}
+h1 {
+    margin: 0;
+}
+.slider-container {
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+.des {
+    width: 150px;
+    height: 200px;
+    margin-right: 10px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    cursor: pointer;
+    scroll-snap-align: center;
+}
+.analysis {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 5px;
+    font-size: 20px;
+}
+h2 {
+    margin-top: 0;
+    color: white;
+}
+.btn-neon{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #ff0404;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.btn-neon:hover{
+    background: #a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    transition-delay: 1s;
+    color: #000000;
+ }
+.btn-neon span{
+    position: absolute;
+    display: block;
+}
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#a945c7);
+ }
+ .btn-neon:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+ #span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#a945c7);
+}
+ .btn-neon:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+#span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#a945c7);
+}
+.btn-neon:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+#span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#a945c7);
+}
+.btn-neon:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+.form{
+    width: 1000px;
+    height: 70px;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.form input{
+    width: 100%;
+    height: 100%;
+    background: none;
+    color: #000000;
+    padding-top: 40px;
+    border: none;
+    outline: 0px;
+}
+.form .lbl-nombre{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #000000;
+}
+.form .lbl-nombre:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #2ecece;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+.text-nomb{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    color: #000000;
+}
+.form input:focus + .lbl-nombre .text-nomb,.form input:valid + .lbl-nombre .text-nomb{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #ff0000;
+}
+.subtitle{
+    color: #000000;
+    text-align: center;
+    font-size: 1rem;
+}
+.form input:focus + .lbl-nombre:after, .form input:valid + .lbl-nombre:after{
+    transform: translateX(0%);
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+ .form{
+    width:85%;
+}}
+.rating {
+    display: inline-block;
+    font-size: 50px;
+}
+.rating input {
+    display: none;
+}
+.rating label {
+    color: #ccc;
+    cursor: pointer;
+}
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input:checked ~ label {
+    color: gold;
+}
+/* Estilos base */
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .logo {
+        width: 80px;
+        height: auto;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .frags {
+        margin: 5px;
+    }
+
+    /* Ajusta estilos adicionales para pantallas pequeñas */
+}
+ 
+ 
