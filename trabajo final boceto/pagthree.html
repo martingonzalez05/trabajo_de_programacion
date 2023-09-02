@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análisis de Juegos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="header">
+        <div><a href="index.html"><img class="logo" onclick="animateAndRedirect()" src="home_8803434.png" alt="logo"></a></div>
+        <div class="parts">
+          <ul>
+            <li class="frags"><a href="index.html"><span>¿Qué es Record of Programming?</span></a></li>
+            <li class="frags"><a href="index.html#section2"><span>¿Quiénes somos?</span></a></li>
+            <li class="frags"><a href="pagtwo.html"><span>¿Buscas trabajo?</span></a></li>
+            <li class="frags"><a href="pagthree.html"><span>Análisis videojueguiles</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="slider-container">
+    <div class="slider">
+      <a href="#" onclick="showGameDetails('The Last Of Us', 'Análisis: The Last of Us es un videojuego de acción y aventuras desarrollado por Naughty Dog. Lanzado en 2013, el juego se destaca por su cautivadora narrativa y emocionalmente cargada experiencia. Ambientado en un mundo postapocalíptico donde una infección ha convertido a la mayoría de la población en criaturas hostiles,sigue a Joel y Ellie mientras luchan por sobrevivir y forman un vínculo improbable en su viaje, El juego combina elementos de acción furtiva, combate y resolución de acertijos en un entorno en constante evolución. La narrativa es un punto culminante clave, ya que explora temas profundos como la moralidad, la supervivencia y las relaciones humanas en un contexto desolado. Los personajes están hábilmente desarrollados, mostrando crecimiento y transformación a medida que se enfrentan a desafíos físicos y emocionales.La excelencia técnica es evidente en la representación visual detallada, la banda sonora emotiva y las actuaciones de voz convincentes. La crítica elogió el juego por su narración conmovedora, que equilibra momentos de tensión con momentos de ternura, y su capacidad para involucrar a los jugadores emocionalmente. ')"><img class="des" src="tlou.jpg" alt="Juego 1"></a>
+      <a href="#" onclick="showGameDetails('Juego 2', 'Análisis del Juego 2')"><img class="des" src="imagen2.jpg" alt="Juego 2"></a>
+      <a href="#" onclick="showGameDetails('Juego 3', 'Análisis del Juego 3')"><img class="des" src="imagen3.jpg" alt="Juego 3"></a>
+      <a href="#" onclick="showGameDetails('Juego 4', 'Análisis del Juego 4')"><img class="des" src="imagen4.jpg" alt="Juego 4"></a>
+      <a href="#" onclick="showGameDetails('Juego 5', 'Análisis del Juego 5')"><img class="des" src="imagen5.jpg" alt="Juego 5"></a>
+    </div>
+  </div>
+
+  <div class="analysis" id="game1">
+    <h2 id="game-title">Detalles y Análisis del Juego</h2>
+    <p id="game-details">Selecciona un juego para ver los detalles y el análisis.</p>
+    <div class="rating">
+      <input type="radio" id="star5" name="rating" value="5">
+      <label for="star5">&#9733;</label>
+      <input type="radio" id="star4" name="rating" value="4">
+      <label for="star4">&#9733;</label>
+      <input type="radio" id="star3" name="rating" value="3">
+      <label for="star3">&#9733;</label>
+      <input type="radio" id="star2" name="rating" value="2">
+      <label for="star2">&#9733;</label>
+      <input type="radio" id="star1" name="rating" value="1">
+      <label for="star1">&#9733;</label>
+    </div>
+  </div>
+
+  <script src="script.jsx"></script>
+</body>
+
+</html>
