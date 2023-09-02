@@ -5,24 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="home_8803434.png" type="image/x-icon" rel="shortcut icon" />
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <!-- logo provisional, despues cambiarlo por uno editado de record of ragnarok-->
-    <title>Record Of Programation</title>
+    <title>Record Of Programming</title>
 </head>
 
-<body>
-    <header class="head">
-      <div class="navbar"><div class="header"> <div><a href="index.html"><img class="logo" onclick="animateAndRedirect()" src="home_8803434.png" alt="logo"></a></div>
-     <div class="parts">
-        <ul>
-            <li class="frags"><a href="#section1"><span>¿Que es record of programming?</span></a></li>
-            <li class="frags"><a href="#section2"><span>¿Quienes somos?</span></a></li>
-            <li class="frags"><a href="pagtwo.html"><span>¿Buscas trabajo?</span></a></li>
-            <li class="frags"><a href="pagthree.html"><span>Analisis videojueguiles</span></a></li>
-        </ul>
-       </div>
-     </div>
+<body> 
+    <header class="head"> 
+      <div class="video">
+      <video autoplay muted loop id="video-background">
+      <source src="person_typing_fast (1080p).mp4" type="video/mp4">
+      Tu navegador no admite el elemento de video.
+</video> 
+<nav class="navbar">
+<div class="text-overlay">
+  <a href="index.html"><img class="logo" onclick="animateAndRedirect()" src="casa-blanca.ico" alt="logo"></a>
+<div class="nav-links">
+  <ul class="ulu">
+          <li class="frags"><a href="#section1"><span class="lista">¿Que es record of programming?</span></a></li>
+          <li class="frags"><a href="#section2"><span  class="lista">¿Quienes somos?</span></a></li>
+          <li class="frags"><a href="pagtwo.html"><span  class="lista">¿Buscas trabajo?</span></a></li>
+          <li class="frags"><a href="pagthree.html"><span  class="lista">Analisis videojueguiles</span></a></li>
+      </ul>
     </div>
-    </header>
+      <div>
+      <img class="menu" src="menu.png" alt="menu">
+    </div>
+</div>
+</nav>
+
+<nav class="nav-bar">
+  <div class="text-gover">
+   <div>
+        <img class="menu" src="menu.png" alt="menu">
+      </div>
+  <div class="nav-links">
+    <ul class="nav-ulu">
+            <li class="frags"><a href="#section1"><span class="lista">¿Que es record of programming?</span></a></li>
+            <li class="frags"><a href="#section2"><span  class="lista">¿Quienes somos?</span></a></li>
+            <li class="frags"><a href="pagtwo.html"><span  class="lista">¿Buscas trabajo?</span></a></li>
+            <li class="frags"><a href="pagthree.html"><span  class="lista">Analisis videojueguiles</span></a></li>
+        </ul>
+      </div>
+        
+  </div>
+  </nav>
+
+<div class="text-over">
+<h1 class="titulo">
+  <span class="letterR">R</span>
+  <span class="letterE">E</span>
+  <span class="letterC">C</span>
+  <span class="letterO">O</span>
+  <span class="letterR2">R</span>
+  <span class="letterD">D</span>
+  <span class="letter-">-</span>
+  <span class="letterO2">O</span>
+  <span class="letterF">F</span>
+<br>
+  <span class="letterP">P</span>
+  <span class="letterR3">R</span>
+  <span class="letterO3">O</span>
+  <span class="letterG">G</span>
+  <span class="letterR4">R</span>
+  <span class="letterA">A</span>
+  <span class="letterM">M</span>
+  <span class="letterM2">M</span>
+  <span class="letterI">I</span>
+  <span class="letterN">N</span>
+  <span class="letterG2">G</span>
+</h1>
+</div>
+</div>
+</header>
     <script>
       function animateAndRedirect() {
         const logo = document.querySelector(".logo")
@@ -36,12 +93,11 @@
       </script>
     <div class="contenedor">
         <hr class="line">
-        <div class="imagen-medio"></div>
       </div>
     <main>
        <section id="section1">
         <div class="what-is-the-page">
-            <div class="img-us1"><img class="imga" src="personas.jpg" alt="nosotros"></div>
+            
             <!--es temporal despues hay que poner una de nosotros-->
             <div class="text"><p>Record of Programming es una innovadora compañía que se destaca en el ámbito de la búsqueda de trabajos digitales.
                Nuestro enfoque se centra en conectar a talentosos profesionales con emocionantes oportunidades en el vasto mundo de la programación y la tecnología. Con una pasión por impulsar el éxito tanto de candidatos como de empresas, brindamos una plataforma donde el conocimiento y la habilidad son altamente valorados.
@@ -50,8 +106,16 @@
               Únete a nosotros en la búsqueda de oportunidades digitales que marquen un hito en tu carrera..</p></div>
        
         </div>
+        <div class="what-is-the-page">
+            <div class="img-us1"><img class="ima" src="personas.jpg" alt="nosotros"></div>
+            <!--es temporal despues hay que poner una de nosotros-->
+           
+            <div class="texto"><p><span class="hover-text">¿Que hay de nuevo?:</span></p>
+            </p></div>
+            
+
+        </div>
         </section>
-        
         <div class="contenedor">
             <hr class="line">
             <div class="imagen-medio"></div>
@@ -74,24 +138,24 @@
     </main>
     <footer class="footer">
       <div class="person">
-       <p>Matheo </p>
-        <ul>
+       <p class="namee">Matheo</p>
+        <ul class="links">
           <li><a href="#"><img class="icons" src="instagram_174855.png" alt="instagram"></a></li>
           <li><a href="#"><img class="icons" src="twitter_733579.png" alt="twitter"></a></li>
           <li><a href="#"><img src="gmail_5968534.png" alt="gmail" class="icons"></a></li>
         </ul>
       </div>
       <div class="person">
-        <p> Martin</p>
-        <ul>
+        <p  class="namee"> Martin</p>
+        <ul class="links">
           <li><a href="#"><img class="icons" src="instagram_174855.png" alt="instagram"></a></li>
           <li><a href="#"><img class="icons" src="twitter_733579.png" alt="twitter"></a></li>
           <li><a href="#"><img src="gmail_5968534.png" alt="gmail" class="icons"></a></li>
         </ul>
       </div>
       <div class="person">
-       <p>Bauti</p>
-        <ul>
+       <p class="namee">Bauti</p>
+        <ul class="links">
           <li><a href="#"><img class="icons" src="instagram_174855.png" alt="instagram"></a></li>
           <li><a href="#"><img class="icons" src="twitter_733579.png" alt="twitter"></a></li>
           <li><a href="#"><img src="gmail_5968534.png" alt="gmail" class="icons"></a></li>
