@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinanza de Números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        input {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Página Principal</a>
+    </nav>
+    <h1>Juego de Adivinanza de Números</h1>
+    <p>¿Puedes adivinar el número entre 1 y 10?</p>
+    <input type="number" id="guess" min="1" max="10">
+    <button onclick="checkGuess()">Adivinar</button>
+    <p id="message"></p>
+    <button onclick="resetGame()">Reiniciar Juego</button>
+
+    <script>
+        let randomNumber;
+        let attempts;
+        let gameEnded = false;
+
+        resetGame();
+
+        function resetGame() {
+            randomNumber = Math.floor(Math.random() * 10) + 1;
+            attempts = 5;
+            gameEnded = false;
+            document.getElementById('guess').value = '';
+            document.getElementById('message').innerHTML = '';
+            document.getElementById('guess').disabled = false;
+            document.querySelector('button').disabled = false;
+        }
+
+        function checkGuess() {
+            if (gameEnded) {
+                return;
+            }
+
+            const guess = parseInt(document.getElementById('guess').value);
+            const message = document.getElementById('message');
+
+            if (isNaN(guess) || guess < 1 || guess > 10) {
+                message.innerHTML = 'Por favor, ingresa un número válido entre 1 y 10.';
+                message.style.color = 'red';
+                return;
+            }
+
+            if (guess === randomNumber) {
+                message.innerHTML = '¡Felicitaciones! Has adivinado el número.';
+                message.style.color = 'green';
+                gameEnded = true;
+                disableInputAndButton();
+            } else {
+                attempts--;
+                if (attempts === 0) {
+                    message.innerHTML = `¡Agotaste tus intentos! El número era ${randomNumber}.`;
+                    message.style.color = 'red';
+                    gameEnded = true;
+                    disableInputAndButton();
+                } else {
+                    message.innerHTML = `Intentos restantes: ${attempts}`;
+                    message.style.color = 'red';
+                }
+            }
+        }
+
+        function disableInputAndButton() {
+            document.getElementById('guess').disabled = true;
+            document.querySelector('button').disabled = true;
+        }
+    </script>
+</body>
+</html>

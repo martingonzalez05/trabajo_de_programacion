@@ -19,6 +19,7 @@
             <li class="frags"><a href="index.html#section2"><span>¿Quiénes somos?</span></a></li>
             <li class="frags"><a href="pagtwo.html"><span>¿Buscas trabajo?</span></a></li>
             <li class="frags"><a href="pagthree.html"><span>Análisis videojueguiles</span></a></li>
+            <li class="frags"><a href="jueguito.html"><span>Juego secreto</span></a></li>
           </ul>
         </div>
       </div>
@@ -39,20 +40,36 @@
     <h2 id="game-title">Detalles y Análisis del Juego</h2>
     <p id="game-details">Selecciona un juego para ver los detalles y el análisis.</p>
     <div class="rating">
-      <input type="radio" id="star5" name="rating" value="5">
+      <input type="radio" id="star5" name="rating" value="5" />
       <label for="star5">&#9733;</label>
-      <input type="radio" id="star4" name="rating" value="4">
+      <input type="radio" id="star4" name="rating" value="4" />
       <label for="star4">&#9733;</label>
-      <input type="radio" id="star3" name="rating" value="3">
+      <input type="radio" id="star3" name="rating" value="3" />
       <label for="star3">&#9733;</label>
-      <input type="radio" id="star2" name="rating" value="2">
+      <input type="radio" id="star2" name="rating" value="2" />
       <label for="star2">&#9733;</label>
-      <input type="radio" id="star1" name="rating" value="1">
+      <input type="radio" id="star1" name="rating" value="1" />
       <label for="star1">&#9733;</label>
-    </div>
+  </div>
+  <script>
+    // Obtener las estrellas y el documento
+    const rating = document.querySelector('.rating');
+    const documentBody = document.body;
+
+    // Agregar un manejador de eventos al documento para restablecer el contador
+    documentBody.addEventListener('click', function(event) {
+        // Verificar si se hizo clic dentro o fuera del elemento de calificación
+        if (!rating.contains(event.target)) {
+            // Reiniciar el contador (desmarcar todas las estrellas)
+            const starInputs = rating.querySelectorAll('input[type="radio"]');
+            starInputs.forEach((input) => {
+                input.checked = false;
+            });
+        }
+    });
+</script>  
   </div>
 
-  <script src="script.jsx"></script>
 </body>
 
 </html>
