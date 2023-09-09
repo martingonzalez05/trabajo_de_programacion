@@ -1,84 +1,179 @@
 /*css del body y de la pagina en total*/
-body,html {
-    background: linear-gradient(to bottom, #232323, #111111);
+body, html {
+    background: linear-gradient(to bottom, #4d4d4d, #000000);
     color: white;
     font-family: Arial, sans-serif;
-    margin: 0 0 0 0px;
+    margin: 0; 
     overflow-x: hidden;
     scroll-behavior: smooth;
-    
 }
-.pagtwo{
-    background-image: url(fondo-pantalla-abstracto-humo-color-diseno-fondo-estetico.jpg);
-    background-size:cover;
-    padding-left: 30px;
-    padding-top: 20px;
-    
+
+/* CSS para la clase .pagtwo */
+.pagtwo {
+    background: url(imagenes/fondo-pantalla-abstracto-humo-color-diseno-fondo-estetico.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
 }
 
 /*css del header y video de fondo*/
 .video-container {
     position: relative;
     width: 100%;
-    height: 80vh; 
-    overflow: hidden;
+    max-height: 80vh;
+    overflow: hidden;  
 }
-#video-background {
+.video-container video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    height: 800px;
-    width:100%;
-    margin-bottom: 0px;
-    z-index: -10;
-    margin-top: 0px;
-    overflow: hidden;
+    object-fit: cover; 
 }
+
+/* CSS para el fondo de video */
+
+#video-background {
+   width: 100%;
+    height: 800px; 
+    object-fit: cover;
+    z-index: -10;
+    overflow: hidden;
+    top: 0;
+    left: 0;  
+}
+
+/* CSS para el elemento de superposición de texto */
+
 .text-overlay {
     position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 5%;
+    left: 5%;
+    right: 0;
+    text-align: center;
     color: white;
-    z-index: 10; 
+    z-index: 10;
     display: flex;
     height: 200px;
-   
-    
 }
-.menu{
-    display: none;
+.text-overlay {
+    min-height: 200px; 
 }
-.logo{
-    align-items: flex-start;
-    margin-left: auto;
-    margin-right: auto;
-    height:8vh;
-    display: inline-block;
-    margin: 0 10px; 
-    cursor: pointer;
-    filter: brightness(1000000%);
+/* CSS para el logotipo */
 
-   
+.logo {
+    margin: 0 auto;
+    height: 8vh;
+    display: block;
+    cursor: pointer;
+    filter: brightness(100%);
 }
-.ulu{
+
+/* CSS para la barra de navegación horizontal */
+
+.ulu {
     list-style: none;
-    display: flex;
-    width: 85vw;
-   margin-top: 0px;
-    
-   
+    display: flex; 
+    width: 100%;
+    margin: 0;
+    padding: 0; 
+}
+.ulu li {
+    margin-right: 10px; 
+}
+.ulu a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 1.5rem;
 }
 .frags{
-    margin-left: 2.6%;
-    font-size: 1.7vw;
+    margin-left: 4vw;
+}
+/* Estilos para la clase .bars__menu */
+.bars__menu {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    margin-right: 5px;
+    z-index: 100;
 }
 
+.bars__menu span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: transform 300ms, opacity 300ms;
+}
+
+.activeline1__bars-menu{
+    transform: rotate(45deg) translate(-2px, 1px); 
+}
+
+.activeline2__bars-menu{
+    opacity: 0;
+    
+}
+
+.activeline3__bars-menu{
+    transform: rotate(-45deg) translate(-4px, 2px);
+}
+
+
+.naveg {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    display: none;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    opacity: 0;
+   
+}
+.activemenu{
+    opacity: 1;
+     transition: all 700ms;
+     
+}
+
+.menu li {
+    margin: 10px 0;
+    display: block;
+    margin-left: 20px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    font-size: 24px;
+    display: none;
+    color: #fff;
+}
+
+/* video */
+
 video{
-    filter: brightness(60%);
+    filter: brightness(50%);
 }
 .titulo{
-    font-size: 6vw;
+    font-size: 7vw;
     margin: auto;
     font-family: 'Oswald', sans-serif;
     cursor: default;
@@ -91,27 +186,37 @@ video{
     color: white;
     z-index: 10; 
     display: flex;  
-    width: 70vw;
+    width: 70%;
 }
+.letter{
+    animation:fl 1s ease-in-out forwards;
+    animation-delay: 0.0s;
+    opacity: 0;
+}
+@keyframes fl{
+    0%{opacity: 1;color: rgb(255, 255, 255);}
+    10%{opacity: 0;color: white;}
+    20%{opacity: 1;color: white;}
+    30%{opacity: 0;color: white;}
+    40%{opacity: 1;color: white;}
+    50%{opacity: 0;color: white;}
+    70%{opacity: 1;color: white;}
+    80%{opacity: 0;color: white;}
+    90%{opacity: 1;color: white;}
+    100%{opacity: 0;color: white;}
+}
+
 .letterR{
-    animation:R1 0.9s ease-in-out forwards;
-    animation-delay: 0.6s;
+    animation:R1 0.6s ease-in-out forwards;
+    animation-delay: 0.9s;
     opacity: 0;
 }
 @keyframes R1{
-    0%{opacity: 1;font-size: 14rem;}
-    10%{opacity: 0;font-size: 13rem ;}
-    20%{opacity: 1;font-size: 12rem ;}
-    30%{opacity: 0;font-size: 11rem ;}
-    40%{opacity: 1;font-size: 10rem ;}
-    50%{opacity: 0;font-size: 9rem ;}
-    60%{opacity: 1;font-size: 8rem ;}
-    70%{opacity: 0;font-size: 7rem ;}
-    80%{opacity: 1;font-size: 6rem}
-    90%{opacity: 0;font-size: 5rem ;}
- 100%{opacity: 1;color: white;font-size: 6vw;}
+        0%{opacity: 0;color: black;}
+        100%{opacity: 1;color: white;}
+    
+    }
 
-}
 .letterE{
     animation:E1 0.1s ease-in-out forwards;
     animation-delay: 1.5s;
@@ -302,43 +407,135 @@ video{
     100%{opacity: 1;color: white;}
 
 }
+:root {
+    --link-color: rgb(255, 255, 255);
+}
+
+
 .frags a {
-    color: rgb(255, 255, 255);
+    color: var(--link-color);
     text-decoration: none;
     padding: 10px;
-    transition: color 0.3s ease-in-out;
     border-bottom: 2px solid transparent;
 }
+
 .frags a:hover {
-    color: #ffffff;
-    border-bottom: 2px solid #f94949;
+    color: #ccfffb;
+    border-bottom: 4px solid #00ffff;
+    transition: color 0.5s ease-in-out;
 }
 
 .line{
-    height: 1px;
-    background-color: white;
+    height: 1vh;
+    background-color:#9affff;
 }
 .nav-bar{
     display:none;
 }
-/*css del section1*/
-#section1{
-    color: #000000;
-    height: 650px;
-    display: flex;
-  
-    
+
+.arrow-container {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    animation: arrow 1s infinite alternate-reverse;
 }
-.text{
+
+@keyframes arrow {
+    0% { top: 80%; }
+    100% { top: 70%; }
+}
+/* Flecha de desplazamiento vertical */
+.scroll-arrow {
+    width: 5px;
+    height: 100px;
+    background-color: #ffffff;
+    position: absolute;
+    cursor: pointer;
+}
+
+/* Flecha de desplazamiento vertical */
+.scroll-arrow::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+    width: 100px;
+    height: 100px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+
+/*css del section1*/
+.section1{
+    height: 650px;
+    display: flex;  
+}
+.ima{
+    width: 450px;
+    height: 450px;
+    clip-path: circle(50.0% at 50% 50%);
+    margin-top: 20vh;
+    margin-left: 1vw;
+    animation: epicAnimation 5s infinite;
+}
+
+.imagen-avatar {
+    width: 450px;
+    height: 450px;
+    clip-path: circle(50% at 50% 50%);
+    margin-top: 20vh;
+    margin-left: 1vw;
+}
+
+/* Animación */
+@keyframes epicAnimation {
+    0%, 100% {
+        filter: brightness(90%);
+    }
+    25%, 75% {
+        filter: brightness(130%);
+    }
+}
+
+/* Aplicar la animación a la imagen */
+.imagen-avatar {
+    animation: epicAnimation 2s infinite;
+}
+.quienes-somos {
+    color: #00ffff;
+    font-size: 2.8rem;
+    margin-top: 1vh;
+    border-bottom: 1vh solid #00ffff;
+}
+
+.text {
     text-align: left;
-    width: 70%;
-    font-size: 1.3rem;
+    width: 90%;
+    font-size: 1.4rem;
     z-index: 10;
     color: #ffffff;
     align-items: center;
-
+    display: flex;
+    margin-left: 2vw;
+    font-stretch: condensed;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
 }
-.texto{
+
+.links-p {
+    text-decoration: none;
+    color: #2ecece;
+    font-weight: 700;
+}
+
+.links-p:hover {
+    color: #00ffff;
+    font-weight: 900;
+}
+
+.texto {
     text-align: left;
     width: 100%;
     font-size: 1.3rem;
@@ -346,113 +543,184 @@ video{
     color: #ffffff;
     opacity: 1;
 }
-.hover-text {
-    position: relative;
-    display: inline-block;
-    font-weight: bold;
-    cursor: pointer;
-    animation: anim 2s ease-in-out infinite;
-}
-@keyframes anim{
-    25%{color: red;}    
-    50%{color: yellow;}
-    75%{color: blue;}
-    
-}
-.hover-text::before {
-    content: "Ademas hemos logrado reunir una amplia y diversa gama de opciones en nuestra plataforma, lo que nos ha llevado a tomar la decisión de introducir una sección dedicada al análisis de juegos. Esta iniciativa tiene como objetivo proporcionar a nuestros usuarios un espacio donde puedan explorar reseñas que abarcan todas las épocas del mundo de los videojuegos. En esta sección, nuestros expertos se embarcarán en la tarea de sumergirse en la experiencia de cada juego, evaluando sus aspectos tanto técnicos como artísticos, nuestro equipo de analistas se dedicará a desentrañar los matices que hacen que cada título sea único. Pero eso no es todo, porque creemos firmemente en la voz de nuestra comunidad. Por ello, hemos diseñado un sistema interactivo que permite a nuestros usuarios no solo leer los análisis, sino también contribuir con sus propias opiniones. Cada análisis estará abierto a comentarios y, además, brindaremos la oportunidad de puntuar tanto la calidad del análisis en sí como el juego en cuestión.";
-    position: absolute;
-    top: -20px;
-    left: -300px;
-    background: linear-gradient(to bottom, #232323, #111111);
-    padding: 5px;
-    border-radius: 4px;
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    color: #ffffff;
-    width: 600px;
-    height: auto;
-}
-.hover-text:hover::before {
-    display: block;
-    opacity: 1;
-}
-.qhdn{
+
+.qhdn {
     color: rgb(237, 21, 21);
     font-size: 2rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 .what-is-the-page {
     display: flex;
     flex-direction: column;
     z-index: 10;
     padding: 20px;
-  
 }
 
 /*css del section2*/
-.imga {
-    width: 150px;
-    height:150px;
-    margin: 20px auto;
-}
-.who-are-us {
+
+
+#conocimiento {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    padding: 40px;
 }
+
+.integrante {
+    text-align: center;
+    background-color: #2f2f2f;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #00ffff;
+    transition: transform 0.3s ease-in-out;
+    height: 45vh;
+    width: 25vw;
+    margin-top: 10vh;
+    position: relative;
+}
+
+.names {
+    color: #00ffff;
+    transform: scale(1.3);
+}
+
+.integrante:hover {
+    transform: translateY(-10vh) scale(1.1);
+}
+
+.info {
+    display: none; /* Inicialmente oculta la información adicional */
+}
+
+.integrante img {
+    max-width: 3vw;
+    border-radius: 25%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    transform: scale(1.2);
+}
+
+.img-me1 {
+    margin-left: 20%;
+}
+
+.img-me2 {
+    margin-left: 45%;
+}
+
+.img-me3 {
+    margin-left: 70%;
+}
+
+.integrante:hover .info {
+    display: block;
+    font-size: 2vw;
+}
+
+.integrante h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.integrante p {
+    font-size: 1.8vw;
+    margin: 20px 0;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+   
+    #conocimiento {
+        flex-direction: column; 
+        align-items: stretch;
+        padding: 10px; 
+        margin-left: 9vw;
+    }
+
+    .integrante {
+        width: 80%; 
+        margin: 20px 0; 
+    }
+    .integrante img{
+        max-width:6vw ;
+    }
+
+    .integrante:hover {
+        transform: translateY(-5vh) scale(1);
+    }
+    .integrante:hover .info {
+        display: block;
+        font-size: 5vw;
+    }
+    .arrow-container{
+        display: none;
+    }
+}
+
 
 /*css del footer*/
-.list {
-    display: flex;
-    align-items: center;
-    color:white;
-}
-.icons{
-    width: 25px;
-    height: 25px;
-    margin-right: 50px;
-    margin-top: 0px;
-}
-.links{
-    display: flex;
-    list-style: none;
-    width: 100%;
-}  
-footer{
-    display: flex;
-    width: 100%;
-}
-.namee{
+ 
+/* styles.css */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    font-size: 20px;
-    font-weight: 20px;
-    margin-bottom: 0px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-}
-.person{
-    padding-left: 10%;
 }
 
+.portfolio {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.website {
+    flex: 1;
+    max-width: 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.website a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.website img {
+    width: 100%;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.website p {
+    margin-top: 5px;
+}
+@media (max-width: 768px) {
+    .portfolio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .website {
+        max-width: 100%;
+    }
+}
 /*css de los inputs*/
 
 .container {
-    max-width: 400px;
+    max-width: 30%;
     margin: auto;
     padding: 20px;
     background-color: transparent;
     backdrop-filter: blur(5px);
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 100px;
     height: 60vh;
     border: #ffffff  solid 2px;
-    
+    text-align: center;
 
-}
-.pagtwo{
-    height: 97vh;
 }
 h1 {
     text-align: center;
@@ -484,7 +752,7 @@ input {
     font-size: 24px;
     overflow: hidden;
     transition: 0.2s;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 .btn-neon:hover{
     background: #a945c7;
@@ -604,21 +872,48 @@ h2 {
 .form input:focus + .lbl-nombre:after, .form input:valid + .lbl-nombre:after{
     transform: translateX(0%);
 }
+/* Estilos para dispositivos móviles (pantallas más pequeñas) */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 80%; 
+    }
+}
+
+/* Estilos para el botón en dispositivos móviles */
+@media screen and (max-width: 480px) {
+    .container button {
+        padding: 8px 16px; 
+        font-size: 1rem; 
+    }
+}
 
 /*css de la parte de analisis*/
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para el encabezado */
 h1 {
     margin: 0;
 }
+
+/* Estilos para el contenedor del slider */
 .slider-container {
     max-width: 800px;
     margin: 20px auto;
     overflow: hidden;
 }
+
+/* Estilos para el slider */
 .slider {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
 }
+
+/* Estilos para cada elemento del slider */
 .des {
     width: 150px;
     height: 200px;
@@ -628,6 +923,8 @@ h1 {
     cursor: pointer;
     scroll-snap-align: center;
 }
+
+/* Estilos para el contenedor de análisis */
 .analysis {
     max-width: 800px;
     margin: 20px auto;
@@ -635,30 +932,35 @@ h1 {
     background-color: #000000;
     border-radius: 5px;
     font-size: 20px;
-}
-.rating {
-    display: inline-block;
-    font-size: 50px;
-}
-.rating input {
-    display: none;
-}
-.rating label {
-    color: #ccc;
-    cursor: pointer;
-}
-.rating label:hover,
-.rating label:hover ~ label,
-.rating input:checked ~ label {
-    color: gold;
-}
-.dela{
-    z-index: 10;
     color: #ffffff;
 }
 
+/* Estilos para la calificación (rating) */
+.rating {
+    display: inline-block;
+    font-size: 50px;
+   
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    color: #ccc;
+    cursor: pointer;
+    margin-right: 10px; /* Añadir un margen para separar las estrellas */
+}
+
+.rating label:hover,
+.rating input:checked ~ label {
+    color: gold;
+}
+
+
+
 /*parte del media*/
- @media (max-width: 1000px) {
+  @media (max-width: 1000px) {
     body {
         font-size: 16px;
     }
@@ -685,14 +987,15 @@ h1 {
         height:100px;
         width: 125vw;
         
+    }
+    .naveg{
+        display: block;
+        margin-left: 0;
     } 
     .menu{
-        display: flex;
-        height: 4vh;
-        margin-top: 45px; 
-         
-
-        
+        display: block;
+        width: 100vw;
+        background: #5f4f4f
     } 
     .titulo{
         margin-top: -150px;
@@ -731,7 +1034,13 @@ h1 {
       
         
     }
-} 
+    .img-us1{
+        display: none;
+    }
+    .text{
+        width: 85vw;
+    }
+}  
 
 /*css de la pagina 2*/
 nav{
@@ -784,4 +1093,49 @@ nav{
         border: none;
     }
    
+}
+
+.game-container {
+    text-align: center;
+    color: white;
+}
+
+.ping-pong-table {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: #222;
+    border: 2px solid white;
+    margin: 20px auto;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.paddle {
+    width: 10px;
+    height: 80px;
+    background-color: white;
+    position: absolute;
+}
+
+#playerPaddle {
+    left: 10px;
+}
+
+#computerPaddle {
+    right: 10px;
+}
+
+.scoreboard {
+    font-size: 24px;
+}
+
+.lives {
+    font-size: 18px;
 }

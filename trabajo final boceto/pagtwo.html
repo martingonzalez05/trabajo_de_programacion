@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,14 @@
   <link rel="stylesheet" href="style.css">
   <link href="home_8803434.png" type="image/x-icon" rel="shortcut icon" />
   <script src="script.js"></script>
+  <!-- <link rel="stylesheet" href="c:\xampp\database.php"> -->
 </head>
+
 <body class="pagtwo">
   <header class="header">
     <nav class="navbar">
       <div class="header">
-        <div><a href="index.html"><img class="logos" onclick="animateAndRedirect()" src="home_8803434.png" alt="logo"></a></div>
+        <a href="index.html"><img class="logo" onclick="animateAndRedirect()" src="home_834077.png" alt="logo"></a>
         <div class="parts">
           <ul class="lulu">
             <li class="frags"><a href="index.html" class="aa"><span>¿Qué es Record of Programming?</span></a></li>
@@ -23,39 +26,56 @@
         </div>
       </div>
     </nav>
+    <nav class="naveg">
+      <ul class="menu">
+        <li><a href="#section1">Record Of Programming</a></li>
+        <li><a href="pagthree.html">Análisis Videojueguiles</a></li>
+      </ul>
+
+
+
+      <div class="bars__menu">
+        <span class="line1__bars-menu"></span>
+        <span class="line2__bars-menu"></span>
+        <span class="line3__bars-menu"></span>
+      </div>
+
+    </nav>
   </header>
-  
+
+
+
   <div class="container">
-    <h1>Formulario de Registro</h1>
-    <h2 class="subtitle">Completa este formulario</h2>
-    <form class="form">
-      <input type="text" required>
+    <form class="form" method="POST" action="procesar_formulario.php">
+      <input type="text" name="nombre" required>
       <label class="lbl-nombre">
         <span class="text-nomb">Nombre</span>
       </label>
     </form>
 
-    <form class="form">
-      <input type="text" required>
+    <form class="form" method="POST" action="procesar_formulario.php">
+      <input type="text" name="conocimientos" required>
       <label class="lbl-nombre">
         <span class="text-nomb">Conocimientos</span>
       </label>
     </form>
-  
-    <form class="form">
-      <input type="email" required>
+
+    <form class="form" method="POST" action="procesar_formulario.php">
+      <input type="email" name="email" required>
       <label class="lbl-nombre">
         <span class="text-nomb">Email</span>
       </label>
     </form>
 
-    <a href="#" class="btn-neon" onclick="animateAndRedirect()">
+    <a href="index.html" class="btn-neon" onclick="animateAndRedirect()">
       <span id="span1"></span>
       <span id="span2"></span>
       <span id="span3"></span>
       <span id="span4"></span>
       Enviar
     </a>
+
   </div>
 </body>
+
 </html>

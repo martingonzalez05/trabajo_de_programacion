@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplasta la Mosca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #game-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 20px auto;
+            border: 1px solid #000;
+        }
+
+        .fly {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            border-radius: 50%;
+        }
+        nav{
+            margin: 40px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 10px;
+            color: #007BFF;
+            font-weight: bold;
+            font-size:25px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+       
+        <a href="index.html">Página Principal</a>
+    </nav>
+    <h1>Aplasta la Mosca</h1>
+    <p>Haz clic en la mosca para aplastarla. ¡Atrapa la mosca!</p>
+    <div id="game-container"></div>
+
+    <script>
+        const gameContainer = document.getElementById('game-container');
+        let maxFlies = 3;
+
+        gameContainer.addEventListener('click', function (e) {
+            if (e.target.classList.contains('fly')) {
+                gameContainer.removeChild(e.target);
+                spawnFly();
+            }
+        });
+
+        function spawnFly() {
+            if (document.querySelectorAll('.fly').length < maxFlies) {
+                const fly = document.createElement('div');
+                fly.className = 'fly';
+                fly.style.left = Math.random() * 350 + 'px';
+                fly.style.top = Math.random() * 350 + 'px';
+                gameContainer.appendChild(fly);
+            }
+        }
+
+        setInterval(spawnFly, 3000); // Cambia el intervalo de aparición aquí (en milisegundos)
+    </script>
+</body>
+</html>
