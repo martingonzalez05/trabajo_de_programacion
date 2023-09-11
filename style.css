@@ -10,7 +10,7 @@ body, html {
 
 /* CSS para la clase .pagtwo */
 .pagtwo {
-    background: url(imagenes/fondo-pantalla-abstracto-humo-color-diseno-fondo-estetico.jpg) no-repeat center center;
+    background: url(fondo-pantalla-abstracto-humo-color-diseno-fondo-estetico.jpg) no-repeat center center;
     background-size: cover;
     height: 100vh;
     margin: 0;
@@ -130,6 +130,7 @@ body, html {
     justify-content: space-between;
     align-items: center; 
     display: none;
+    height: 15vh;
 }
 
 .menu {
@@ -162,7 +163,7 @@ body, html {
 
 .menu-toggle {
     cursor: pointer;
-    font-size: 24px;
+    font-size: 24vh;
     display: none;
     color: #fff;
 }
@@ -931,7 +932,7 @@ h1 {
     padding: 20px;
     background-color: #000000;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 23px;
     color: #ffffff;
 }
 
