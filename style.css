@@ -4,7 +4,7 @@ body, html {
     color: white;
     font-family: Arial, sans-serif;
     margin: 0; 
-    overflow-x: hidden;
+   
     scroll-behavior: smooth;
 }
 
@@ -14,6 +14,9 @@ body, html {
     background-size: cover;
     height: 100vh;
     margin: 0;
+}
+.pagthree{
+    overflow-x: hidden;
 }
 
 /*css del header y video de fondo*/
@@ -130,7 +133,7 @@ body, html {
     justify-content: space-between;
     align-items: center; 
     display: none;
-    height: 15vh;
+    
 }
 
 .menu {
@@ -141,6 +144,7 @@ body, html {
     z-index: 0;
     top: 0;
     opacity: 0;
+  
    
 }
 .activemenu{
@@ -150,7 +154,7 @@ body, html {
 }
 
 .menu li {
-    margin: 10px 0;
+    margin: 7px 0;
     display: block;
     margin-left: 20px;
 }
@@ -158,7 +162,7 @@ body, html {
 .menu a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .menu-toggle {
@@ -174,7 +178,7 @@ video{
     filter: brightness(50%);
 }
 .titulo{
-    font-size: 7vw;
+    font-size: 6vw;
     margin: auto;
     font-family: 'Oswald', sans-serif;
     cursor: default;
@@ -513,7 +517,7 @@ video{
 
 .text {
     text-align: left;
-    width: 90%;
+    width: 80%;
     font-size: 1.4rem;
     z-index: 10;
     color: #ffffff;
@@ -533,7 +537,7 @@ video{
 
 .links-p:hover {
     color: #00ffff;
-    font-weight: 900;
+    font-size:1.45rem ;
 }
 
 .texto {
@@ -636,13 +640,13 @@ video{
     #conocimiento {
         flex-direction: column; 
         align-items: stretch;
-        padding: 10px; 
+        
         margin-left: 9vw;
     }
 
     .integrante {
         width: 80%; 
-        margin: 20px 0; 
+        margin: 40px 0; 
     }
     .integrante img{
         max-width:6vw ;
@@ -653,7 +657,7 @@ video{
     }
     .integrante:hover .info {
         display: block;
-        font-size: 5vw;
+        font-size: 4vw;
     }
     .arrow-container{
         display: none;
@@ -676,12 +680,17 @@ footer {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+.port:hover{
+    filter: brightness(80%);
+
+}
 
 .website {
     flex: 1;
     max-width: 200px;
     margin: 10px;
     text-align: center;
+    font-size: 25px;
 }
 
 .website a {
@@ -813,7 +822,7 @@ input {
     transition-delay: 0.75s;
 }
 .form{
-    width: 1000px;
+    width:100%;
     height: 70px;
     max-width: 400px;
     position: relative;
@@ -876,7 +885,7 @@ h2 {
 /* Estilos para dispositivos móviles (pantallas más pequeñas) */
 @media screen and (max-width: 768px) {
     .container {
-        max-width: 80%; 
+        max-width: 70%; 
     }
 }
 
@@ -902,7 +911,7 @@ h1 {
 
 /* Estilos para el contenedor del slider */
 .slider-container {
-    max-width: 800px;
+    max-width: 810px;
     margin: 20px auto;
     overflow: hidden;
 }
@@ -964,6 +973,7 @@ h1 {
   @media (max-width: 1000px) {
     body {
         font-size: 16px;
+        overflow-x: hidden;
     }
     .navbar{
         display: none;
@@ -992,6 +1002,7 @@ h1 {
     .naveg{
         display: block;
         margin-left: 0;
+    
     } 
     .menu{
         display: block;
@@ -1001,6 +1012,9 @@ h1 {
     .titulo{
         margin-top: -150px;
         left: 80%;
+    }
+    .text-over{
+        top: 60%;
     }
     #video-background{
         height: 400px;
