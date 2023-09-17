@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Análisis de Juegos</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"> </script>
 </head>
 
 <body class="pagthree">
@@ -13,7 +14,7 @@
     <nav class="navbar">
       <div class="header">
         <a href="index.html"><img class="logo" onclick="animateAndRedirect()" src="home_834077.png" alt="logo"></a>
-        <div class="parts">
+        <div class="nav-links">
           <ul class="lulu">
             <li class="frags"><a href="index.html" class="aa"><span>¿Qué es Record of Programming?</span></a></li>
             <li class="frags"><a href="index.html#section2" class="aa"><span>¿Quiénes somos?</span></a></li>
@@ -23,10 +24,23 @@
       </div>
     </nav>
     <nav class="naveg">
+  
       <ul class="menu">
-        <li><a href="#section1">Record Of Programming</a></li>
-        <li><a href="pagthree.html">Análisis Videojueguiles</a></li>
+        <li><a href="index.html">Record Of Programming</a></li>
+        <li><a href="pagtwo.html">Buscas trabajo?</a></li>
+    
+      
       </ul>
+
+
+
+      <div class="bars__menu">
+        <span class="line1__bars-menu"></span>
+        <span class="line2__bars-menu"></span>
+        <span class="line3__bars-menu"></span>
+      </div>
+
+    </nav>
 
   </header>
 
@@ -44,18 +58,20 @@
   <div class="analysis" id="game1">
     <h2 id="game-title">Detalles y Análisis del Juego</h2>
     <p id="game-details">Selecciona un juego para ver los detalles y el análisis.</p>
-    <div class="rating">
-      <input type="radio" id="star5" name="rating" value="5" />
-      <label for="star5">&#9733;</label>
-      <input type="radio" id="star4" name="rating" value="4" />
-      <label for="star4">&#9733;</label>
-      <input type="radio" id="star3" name="rating" value="3" />
-      <label for="star3">&#9733;</label>
-      <input type="radio" id="star2" name="rating" value="2" />
-      <label for="star2">&#9733;</label>
-      <input type="radio" id="star1" name="rating" value="1" />
-      <label for="star1">&#9733;</label>
-  </div>
+    <form>
+      <p class="clasificacion">
+        <input id="radio1" type="radio" name="estrellas" value="5"><!--
+        --><label for="radio1">★</label><!--
+        --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+        --><label for="radio2">★</label><!--
+        --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+        --><label for="radio3">★</label><!--
+        --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+        --><label for="radio4">★</label><!--
+        --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+        --><label for="radio5">★</label>
+      </p>
+    </form>
   <script>
       function showGameDetails(title, details) {
       const gameTitle = document.getElementById('game-title');

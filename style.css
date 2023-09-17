@@ -14,6 +14,7 @@ body, html {
     background-size: cover;
     height: 100vh;
     margin: 0;
+    overflow-x: hidden;
 }
 .pagthree{
     overflow-x: hidden;
@@ -739,7 +740,7 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
-    color: #ffffff;
+    color: #00fffb;
 }  
 label {
     margin-bottom: 8px;
@@ -827,13 +828,13 @@ input {
     max-width: 400px;
     position: relative;
     overflow: hidden;
-    color: #ffffff;
+    color: #00f7ff;
 }
 .form input{
     width: 100%;
     height: 100%;
     background: none;
-    color: #ffffff;
+    color: #ff0000;
     padding-top: 40px;
     border: none;
     outline: 0px;
@@ -863,7 +864,7 @@ input {
     bottom: 5px;
     left: 0;
     transition: all 0.3s ease;
-    color: #ffffff;
+    color: #00f7ff;
 }
 h2 {
     margin-top: 0;
@@ -872,7 +873,7 @@ h2 {
 .form input:focus + .lbl-nombre .text-nomb,.form input:valid + .lbl-nombre .text-nomb{
     transform: translateY(-150%);
     font-size: 14px;
-    color: #ffffff;
+    color: #00ffee;
 }
 .subtitle{
     color: #ffffff;
@@ -912,7 +913,7 @@ h1 {
 /* Estilos para el contenedor del slider */
 .slider-container {
     max-width: 810px;
-    margin: 20px auto;
+    margin: 50px auto;
     overflow: hidden;
 }
 
@@ -933,6 +934,10 @@ h1 {
     cursor: pointer;
     scroll-snap-align: center;
 }
+.des:hover{
+    filter: brightness(70%);
+  
+}
 
 /* Estilos para el contenedor de análisis */
 .analysis {
@@ -946,28 +951,40 @@ h1 {
 }
 
 /* Estilos para la calificación (rating) */
-.rating {
-    display: inline-block;
-    font-size: 50px;
-   
-}
-
-.rating input {
+#form {
+    width: 250px;
+    margin: auto;
+    height: 50px;
+  }
+  
+  #form p {
+    text-align: center;
+  }
+    
+  input[type="radio"] {
     display: none;
-}
-
-.rating label {
-    color: #ccc;
+    
+  }
+  
+  label {
+    color: grey;
+    font-size: 30px;
     cursor: pointer;
-    margin-right: 10px; /* Añadir un margen para separar las estrellas */
-}
-
-.rating label:hover,
-.rating input:checked ~ label {
-    color: gold;
-}
-
-
+  }
+  
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  
+  label:hover,
+  label:hover ~ label {
+    color: orange;
+  }
+  
+  input[type="radio"]:checked ~ label {
+    color: orange;
+  }
 
 /*parte del media*/
   @media (max-width: 1000px) {
@@ -1007,7 +1024,7 @@ h1 {
     .menu{
         display: block;
         width: 100vw;
-        background: #5f4f4f
+        background: #1d1d1d
     } 
     .titulo{
         margin-top: -150px;
@@ -1088,7 +1105,7 @@ nav{
 .aa{
     text-decoration: none;
     color: #ffffff;
-    font-size: 1.5vw;
+    font-size: 1.9vw;
 }
 .fragss:hover{
     border-bottom: 2px solid #ffffff;
@@ -1100,6 +1117,11 @@ nav{
     display: flex;
     margin: 0 10px; 
     cursor: pointer;
+}
+.slider-container {
+    max-width: 810px;
+    margin: 80px auto;
+    overflow: hidden;
 }
 
 @media (max-width: 1000px) {
