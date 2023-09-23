@@ -75,25 +75,20 @@
     }
 
     .puntuacion {
-      position: absolute;
-      top: 20px;
+      color: black;
+      top: 40px;
       font-size: 24px;
     }
 
     #puntuacion-izquierda {
       left: 20px;
+    
     }
 
     #puntuacion-derecha {
       right: 20px;
     }
-
-    .vidas {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-size: 24px;
-    }
+ 
     nav{
             margin: 40px;
             text-align: center;
@@ -171,6 +166,10 @@ function colisiona(obj1, obj2) {
          obj1.y + obj1.altura > obj2.y;
 }
 
+// Variables para llevar el registro de los puntajes
+var puntajeIzquierda = 0;
+var puntajeDerecha = 0;
+
 // bucle del juego
 function bucle() {
   requestAnimationFrame(bucle);
@@ -199,8 +198,6 @@ function bucle() {
   context.fillStyle = 'white';
   context.fillRect(palaIzquierda.x, palaIzquierda.y, palaIzquierda.ancho, palaIzquierda.altura);
   context.fillRect(palaDerecha.x, palaDerecha.y, palaDerecha.ancho, palaDerecha.altura);
-  
-  
 
   // mueve la pelota según su velocidad
   pelota.x += pelota.dx;
@@ -219,6 +216,13 @@ function bucle() {
   // restablece la pelota si pasa por la paleta (pero solo si aún no lo hemos hecho)
   if ( (pelota.x < 0 || pelota.x > canvas.width) && !pelota.restableciendo) {
     pelota.restableciendo = true;
+
+    // Actualiza los puntajes
+    if (pelota.x < 0) {
+      puntajeDerecha++;
+    } else {
+      puntajeIzquierda++;
+    }
 
     // da un tiempo para que el jugador se recupere antes de lanzar la pelota nuevamente
     setTimeout(() => {
@@ -262,6 +266,12 @@ function bucle() {
   // Cambia el color y el grosor de la línea central
   context.fillStyle = 'white';
   context.fillRect(canvas.width / 2 - 2, 0, 4, canvas.height); // Línea central sólida
+
+  // Muestra los puntajes en el lienzo
+  context.fillStyle = 'lightskyblue';
+  context.font = '25px Arial';
+  context.fillText('Puntaje: ' + puntajeIzquierda, 38, 38);
+  context.fillText('Puntaje: ' + puntajeDerecha, canvas.width - 138, 38);
 }
 
 // escucha eventos del teclado para mover las paletas
@@ -300,8 +310,6 @@ document.addEventListener('keyup', function(e) {
 
 // inicia el juego
 requestAnimationFrame(bucle);
-
-
 
 </script>
 </body>
