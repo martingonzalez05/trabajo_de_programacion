@@ -4,16 +4,20 @@ body, html {
     color: white;
     font-family: Arial, sans-serif;
     margin: 0; 
-    overflow-x: hidden;
+   
     scroll-behavior: smooth;
 }
 
 /* CSS para la clase .pagtwo */
 .pagtwo {
-    background: url(imagenes/fondo-pantalla-abstracto-humo-color-diseno-fondo-estetico.jpg) no-repeat center center;
+    background: url(fondo-pantalla-abstracto-humo-color-diseno-fondo-estetico.jpg) no-repeat center center;
     background-size: cover;
     height: 100vh;
     margin: 0;
+    overflow-x: hidden;
+}
+.pagthree{
+    overflow-x: hidden;
 }
 
 /*css del header y video de fondo*/
@@ -130,6 +134,7 @@ body, html {
     justify-content: space-between;
     align-items: center; 
     display: none;
+    
 }
 
 .menu {
@@ -140,6 +145,7 @@ body, html {
     z-index: 0;
     top: 0;
     opacity: 0;
+  
    
 }
 .activemenu{
@@ -149,7 +155,7 @@ body, html {
 }
 
 .menu li {
-    margin: 10px 0;
+    margin: 7px 0;
     display: block;
     margin-left: 20px;
 }
@@ -157,12 +163,12 @@ body, html {
 .menu a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .menu-toggle {
     cursor: pointer;
-    font-size: 24px;
+    font-size: 24vh;
     display: none;
     color: #fff;
 }
@@ -173,7 +179,7 @@ video{
     filter: brightness(50%);
 }
 .titulo{
-    font-size: 7vw;
+    font-size: 6vw;
     margin: auto;
     font-family: 'Oswald', sans-serif;
     cursor: default;
@@ -420,8 +426,8 @@ video{
 }
 
 .frags a:hover {
-    color: #ccfffb;
-    border-bottom: 4px solid #00ffff;
+    color: #00ffd5;
+    border-bottom: 4px solid #00ffd5;
     transition: color 0.5s ease-in-out;
 }
 
@@ -435,7 +441,7 @@ video{
 
 .arrow-container {
     position: absolute;
-    top: 70%;
+    top: 50vh;
     left: 10%;
     animation: arrow 1s infinite alternate-reverse;
 }
@@ -446,8 +452,8 @@ video{
 }
 /* Flecha de desplazamiento vertical */
 .scroll-arrow {
-    width: 5px;
-    height: 100px;
+    width: 4px;
+    height: 85px;
     background-color: #ffffff;
     position: absolute;
     cursor: pointer;
@@ -457,11 +463,11 @@ video{
 .scroll-arrow::after {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(135deg);
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-top: 2px solid #fff;
     border-right: 2px solid #fff;
 }
@@ -512,7 +518,7 @@ video{
 
 .text {
     text-align: left;
-    width: 90%;
+    width: 80%;
     font-size: 1.4rem;
     z-index: 10;
     color: #ffffff;
@@ -532,7 +538,7 @@ video{
 
 .links-p:hover {
     color: #00ffff;
-    font-weight: 900;
+    font-size:1.45rem ;
 }
 
 .texto {
@@ -576,7 +582,7 @@ video{
     transition: transform 0.3s ease-in-out;
     height: 45vh;
     width: 25vw;
-    margin-top: 10vh;
+    margin: 10vh auto;
     position: relative;
 }
 
@@ -630,18 +636,17 @@ video{
     color: #ffffff;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
    
     #conocimiento {
         flex-direction: column; 
         align-items: stretch;
-        padding: 10px; 
-        margin-left: 9vw;
+        margin: auto;
     }
 
     .integrante {
-        width: 80%; 
-        margin: 20px 0; 
+        width: 90%;
+        margin: 40px 0; 
     }
     .integrante img{
         max-width:6vw ;
@@ -652,17 +657,20 @@ video{
     }
     .integrante:hover .info {
         display: block;
-        font-size: 5vw;
+        font-size: 4vw;
     }
-    .arrow-container{
-        display: none;
+    .arrow-container {
+        position: absolute;
+        top: 50vh;
+        left: 20%;
+        animation: arrow 1s infinite alternate-reverse;
     }
-}
+}  
 
 
 /*css del footer*/
  
-/* styles.css */
+
 footer {
     background-color: #333;
     color: #fff;
@@ -675,12 +683,17 @@ footer {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+.port:hover{
+    filter: brightness(80%);
+
+}
 
 .website {
     flex: 1;
     max-width: 200px;
     margin: 10px;
     text-align: center;
+    font-size: 25px;
 }
 
 .website a {
@@ -729,11 +742,11 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
-    color: #ffffff;
+    color: #00fffb;
 }  
 label {
     margin-bottom: 8px;
-    font-size: 20px;
+    font-size: 50px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 input {
@@ -746,13 +759,16 @@ input {
     position: relative;
     display: inline-block;
     padding: 15px 30px;
-    color: #ff0404;
+    color: #000000;
     letter-spacing: 4px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 29px;
     overflow: hidden;
     transition: 0.2s;
     margin-top: 60px;
+    background-color: red;
+    border-radius: 10px;
+    border: transparent;
 }
 .btn-neon:hover{
     background: #a945c7;
@@ -812,18 +828,18 @@ input {
     transition-delay: 0.75s;
 }
 .form{
-    width: 1000px;
+    width:100%;
     height: 70px;
     max-width: 400px;
     position: relative;
     overflow: hidden;
-    color: #ffffff;
+    color: #00f7ff;
 }
 .form input{
     width: 100%;
     height: 100%;
     background: none;
-    color: #ffffff;
+    color: #6131fb;
     padding-top: 40px;
     border: none;
     outline: 0px;
@@ -853,7 +869,7 @@ input {
     bottom: 5px;
     left: 0;
     transition: all 0.3s ease;
-    color: #ffffff;
+    color: #00f7ff;
 }
 h2 {
     margin-top: 0;
@@ -862,7 +878,7 @@ h2 {
 .form input:focus + .lbl-nombre .text-nomb,.form input:valid + .lbl-nombre .text-nomb{
     transform: translateY(-150%);
     font-size: 14px;
-    color: #ffffff;
+    color: #00ffee;
 }
 .subtitle{
     color: #ffffff;
@@ -875,7 +891,7 @@ h2 {
 /* Estilos para dispositivos móviles (pantallas más pequeñas) */
 @media screen and (max-width: 768px) {
     .container {
-        max-width: 80%; 
+        max-width: 70%; 
     }
 }
 
@@ -901,8 +917,8 @@ h1 {
 
 /* Estilos para el contenedor del slider */
 .slider-container {
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 810px;
+    margin: 50px auto;
     overflow: hidden;
 }
 
@@ -923,6 +939,10 @@ h1 {
     cursor: pointer;
     scroll-snap-align: center;
 }
+.des:hover{
+    filter: brightness(70%);
+  
+}
 
 /* Estilos para el contenedor de análisis */
 .analysis {
@@ -931,38 +951,51 @@ h1 {
     padding: 20px;
     background-color: #000000;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 23px;
     color: #ffffff;
 }
 
 /* Estilos para la calificación (rating) */
-.rating {
-    display: inline-block;
-    font-size: 50px;
-   
-}
-
-.rating input {
+#form {
+    width: 250px;
+    margin: auto;
+    height: 50px;
+  }
+  
+  #form p {
+    text-align: center;
+  }
+    
+  input[type="radio"] {
     display: none;
-}
-
-.rating label {
-    color: #ccc;
+    
+  }
+  
+  label {
+    color: grey;
+    font-size: 25px;
     cursor: pointer;
-    margin-right: 10px; /* Añadir un margen para separar las estrellas */
-}
-
-.rating label:hover,
-.rating input:checked ~ label {
-    color: gold;
-}
-
-
+  }
+  
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  
+  label:hover,
+  label:hover ~ label {
+    color: orange;
+  }
+  
+  input[type="radio"]:checked ~ label {
+    color: orange;
+  }
 
 /*parte del media*/
-  @media (max-width: 1000px) {
+  @media (max-width: 1300px) {
     body {
         font-size: 16px;
+        overflow-x: hidden;
     }
     .navbar{
         display: none;
@@ -991,18 +1024,22 @@ h1 {
     .naveg{
         display: block;
         margin-left: 0;
+    
     } 
     .menu{
         display: block;
         width: 100vw;
-        background: #5f4f4f
+        background: #1d1d1d
     } 
     .titulo{
-        margin-top: -150px;
+        margin-top: -30vh;
         left: 80%;
     }
+    .text-over{
+        top: 60%;
+    }
     #video-background{
-        height: 400px;
+        height: 100vh;
     }
     .frags{
         display: block;
@@ -1040,7 +1077,12 @@ h1 {
     .text{
         width: 85vw;
     }
+    .website:nth-child(4){
+        display: none;
+    }
+    
 }  
+
 
 /*css de la pagina 2*/
 nav{
@@ -1073,7 +1115,7 @@ nav{
 .aa{
     text-decoration: none;
     color: #ffffff;
-    font-size: 1.5vw;
+    font-size: 1.9vw;
 }
 .fragss:hover{
     border-bottom: 2px solid #ffffff;
@@ -1086,6 +1128,11 @@ nav{
     margin: 0 10px; 
     cursor: pointer;
 }
+.slider-container {
+    max-width: 810px;
+    margin: 80px auto;
+    overflow: hidden;
+}
 
 @media (max-width: 1000px) {
     
@@ -1095,47 +1142,3 @@ nav{
    
 }
 
-.game-container {
-    text-align: center;
-    color: white;
-}
-
-.ping-pong-table {
-    position: relative;
-    width: 600px;
-    height: 400px;
-    background-color: #222;
-    border: 2px solid white;
-    margin: 20px auto;
-}
-
-.ball {
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-}
-
-.paddle {
-    width: 10px;
-    height: 80px;
-    background-color: white;
-    position: absolute;
-}
-
-#playerPaddle {
-    left: 10px;
-}
-
-#computerPaddle {
-    right: 10px;
-}
-
-.scoreboard {
-    font-size: 24px;
-}
-
-.lives {
-    font-size: 18px;
-}

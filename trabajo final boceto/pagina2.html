@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora en Línea</title>
+    <link rel="icon" href="home_834077.png" type="image">
+    <title>Calculadora</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -68,8 +69,6 @@
 </head>
 <body>
     <nav>
-      
-        
         <a href="index.html">Página Principal</a>
     </nav>
     <div class="calculator">
@@ -88,6 +87,7 @@
             <button onclick="appendToDisplay('3')">3</button>
             <button onclick="appendToDisplay('*')">*</button>
             <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button> <!-- Botón de coma -->
             <button onclick="clearLast()">⌫</button>
             <button onclick="clearDisplay()">C</button>
             <button onclick="calculateResult()">=</button>
@@ -122,7 +122,7 @@
         // Habilitar entrada de teclado
         document.addEventListener('keydown', function(event) {
             const key = event.key;
-            if (/[0-9+\-*/]/.test(key)) {
+            if (/[0-9+\-*/,]/.test(key)) {
                 event.preventDefault(); // Evitar acciones por defecto
                 appendToDisplay(key);
             } else if (key === 'Backspace') {

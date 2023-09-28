@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>¿Buscas trabajo?</title>
   <link rel="stylesheet" href="style.css">
-  <link href="home_8803434.png" type="image/x-icon" rel="shortcut icon" />
-  <script src="script.js"></script>
+  <link rel="icon" href="home_834077.png" type="image">
+
   <!-- <link rel="stylesheet" href="c:\xampp\database.php"> -->
 </head>
 
@@ -20,16 +20,19 @@
           <ul class="lulu">
             <li class="frags"><a href="index.html" class="aa"><span>¿Qué es Record of Programming?</span></a></li>
             <li class="frags"><a href="index.html#section2" class="aa"><span>¿Quiénes somos?</span></a></li>
-            <li class="frags"><a href="pagtwo.html" class="aa"><span>¿Buscas trabajo?</span></a></li>
+           
             <li class="frags"><a href="pagthree.html" class="aa"><span>Análisis videojueguiles</span></a></li>
           </ul>
         </div>
       </div>
     </nav>
     <nav class="naveg">
+  
       <ul class="menu">
-        <li><a href="#section1">Record Of Programming</a></li>
+        <li><a href="index.html">Record Of Programming</a></li>
         <li><a href="pagthree.html">Análisis Videojueguiles</a></li>
+    
+      
       </ul>
 
 
@@ -45,37 +48,47 @@
 
 
 
+ 
   <div class="container">
-    <form class="form" method="POST" action="procesar_formulario.php">
+    <form class="form"  id="miFormulario">
       <input type="text" name="nombre" required>
       <label class="lbl-nombre">
         <span class="text-nomb">Nombre</span>
       </label>
     </form>
 
-    <form class="form" method="POST" action="procesar_formulario.php">
+    <form class="form" >
       <input type="text" name="conocimientos" required>
       <label class="lbl-nombre">
         <span class="text-nomb">Conocimientos</span>
       </label>
     </form>
 
-    <form class="form" method="POST" action="procesar_formulario.php">
+    <form class="form" >
       <input type="email" name="email" required>
       <label class="lbl-nombre">
         <span class="text-nomb">Email</span>
       </label>
     </form>
 
-    <a href="index.html" class="btn-neon" onclick="animateAndRedirect()">
+    <a href="pagfour.html" target="_blank" class="btn-neon" id="enviarBtn">
       <span id="span1"></span>
       <span id="span2"></span>
       <span id="span3"></span>
       <span id="span4"></span>
       Enviar
     </a>
-
   </div>
+
+  <script>
+    document.getElementById("enviarBtn").addEventListener("click", function(event) {
+      var form = document.getElementById("miFormulario");
+      if (!form.checkValidity()) {
+        event.preventDefault(); // Evita que se envíe el formulario si no es válido
+        alert("Por favor, completa todos los campos.");
+      }
+    });
+  </script>
 </body>
 
 </html>

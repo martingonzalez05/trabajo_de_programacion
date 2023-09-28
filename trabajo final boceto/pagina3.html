@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="home_834077.png" type="image">
     <title>Aplasta la Mosca</title>
     <style>
         body {
@@ -22,11 +23,14 @@
             position: absolute;
             width: 50px;
             height: 50px;
-            background-color: #000;
+            background:#ffffff;
             border-radius: 50%;
+            user-select: none;
+            -webkit-user-drag: none; 
         }
+
         nav{
-            margin: 40px;
+            margin: 20px;
             text-align: center;
         }
 
@@ -41,39 +45,84 @@
         nav a:hover {
             text-decoration: underline;
         }
+
+        #restartButton{
+            text-align: center;
+            text-decoration: none;
+            margin: 0 10px;
+            color: #007BFF;
+            font-weight: bold;
+            font-size:25px;
+            border: none;
+        }
+        
     </style>
 </head>
 <body>
     <nav>
-       
         <a href="index.html">Página Principal</a>
     </nav>
     <h1>Aplasta la Mosca</h1>
     <p>Haz clic en la mosca para aplastarla. ¡Atrapa la mosca!</p>
     <div id="game-container"></div>
+    
+    <p id="scoreDisplay">Puntaje: 0</p>
+    <button id="restartButton" onclick="restartGame()">Jugar de nuevo</button>
 
     <script>
         const gameContainer = document.getElementById('game-container');
-        let maxFlies = 3;
+        const scoreDisplay = document.getElementById('scoreDisplay');
+        const restartButton = document.getElementById('restartButton');
+        let maxFlies = 7;
+        let score = 0;
+        let gameOver = false;
+        let interval;
 
         gameContainer.addEventListener('click', function (e) {
+            if (gameOver) return; // Evita clics después del juego terminado
             if (e.target.classList.contains('fly')) {
                 gameContainer.removeChild(e.target);
                 spawnFly();
+                score++;
+                scoreDisplay.innerText = 'Puntaje: ' + score;
             }
         });
 
         function spawnFly() {
-            if (document.querySelectorAll('.fly').length < maxFlies) {
-                const fly = document.createElement('div');
-                fly.className = 'fly';
-                fly.style.left = Math.random() * 350 + 'px';
-                fly.style.top = Math.random() * 350 + 'px';
-                gameContainer.appendChild(fly);
-            }
+    const flies = document.querySelectorAll('.fly');
+    if (flies.length < maxFlies) {
+        const fly = document.createElement('img');
+        fly.className = 'fly';
+        fly.src = 'fly_4940996.png'; // Ruta a la imagen de la mosca
+        fly.style.left = Math.random() * 350 + 'px';
+        fly.style.top = Math.random() * 350 + 'px';
+        gameContainer.appendChild(fly);
+
+        // Verificar si hay más de 6 moscas en pantalla
+        if (flies.length >= 6) {
+            endGame();
+        }
+    }
+}
+
+
+        function endGame() {
+            gameOver = true;
+            clearInterval(interval);
+            gameContainer.innerHTML = '<h2>¡Perdiste!</h2><p>Tu puntaje final es: ' + score + '</p>';
         }
 
-        setInterval(spawnFly, 3000); // Cambia el intervalo de aparición aquí (en milisegundos)
+        function restartGame() {
+            gameOver = false;
+            score = 0;
+            scoreDisplay.innerText = 'Puntaje: ' + score;
+            gameContainer.innerHTML = ''; // Elimina las moscas existentes
+         
+            interval = setInterval(spawnFly, 3000); // Reinicia la generación de moscas
+        }
+
+        // Comienza el juego
+        interval = setInterval(spawnFly, 3000);
     </script>
 </body>
 </html>
